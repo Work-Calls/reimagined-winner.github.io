@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giftcoin Dashboard</title>
+  
+  <!-- Favicon -->
+  <link href="favicon_io/favicon.ico" rel="shortcut icon">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"rel="stylesheet"/>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"rel="stylesheet" />
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .wallet-container {
+      margin-top: 2%;
+    }
+
+    .wallet-card {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .wallet-header {
+      background-color: #000000;
+      color: #fff;
+      padding: 15px;
+    }
+
+    .wallet-balance {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .wallet-details {
+      padding: 15px;
+    }
+    .circle i {
+      width: 50px;
+      height: 50px;
+      background-color: #f9f9f9; /* Set your desired background color */
+      border-radius: 50%;
+      padding: 14px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle i {
+      color: #000000; /* Set your desired text color */
+      font-size: 20px; /* Set your desired icon size */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <h4>WALLET BALANCE</h4>
+        <!--<img
+          src="img/loggo.png"
+          height="25"
+          alt="MDB Logo"
+          loading="logo"
+        />-->
+      </a>
+     
+    </div>
+    <!-- Collapsible wrapper -->
+    
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a
+          data-mdb-dropdown-init
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          aria-expanded="false"
+        >
+          <img
+            src="img/profile-icon.png"
+            class="rounded-circle"
+            height="50"
+            alt="profile icon"
+            loading="lazy"
+          />
+        </a>
+        
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<!--main content-->
+  <div class="container wallet-container">
+    <div class="row justify-content-center ">
+      <div class="col-md-6">
+
+        <!-- Transaction History -->
+        <div class="card wallet-card">
+            <div class="card-header wallet-header">
+              <h3>Confirm withdrawal</h3>
+            </div>
+        <div class="card wallet-card">
+          <!--icons-->
+          <div class="container mt-5">
+            <!-- Icon Section -->
+            <div class="row text-center">
+
+          <!--coins places-->
+          <div class="card-body">
+            <p class="p-3" style="font-weight:bold;">Proceed to fill in the information</p>
+            <ul class="list-group">
+             
+              <form>
+                <label for="#" style="float: left;">Send to:</label>
+                <br>
+                <br>
+                <input type="text" placeholder="address" class="form-control" required>
+                <br>
+                <label for="#" style="float: left;">Amount:</label>
+                <br>
+                <br>
+                <input type="text" placeholder="Amount" class="form-control" required>
+                <br>
+                 <a href="#myModal" data-bs-toggle="modal" class="btn"
+              style="background-color: #000000; color: #f9f9f9;"> Proceed
+              </a>
+
+                <!--<button type="submit" class="btn btn-dark btn-block" data-bs-toggle="modal" data-bs-target="#myModal">
+                    withdraw</button>-->
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal1 -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal content goes here -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: red;">Error!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ooops you cannot make withdrawal without having 50% deposit transaction history
+      </div>
+      <div class="modal-footer">
+        <a href="dashboard.html" style="text-decoration: none;background-color: #000000;
+         color: #f8f9fa; border-radius: 10px; padding: 10px;">Back to Deposit</a> 
+      </div>
+    </div>
+  </div>
+</div>
+   
+
+ <footer class="bg-light text-light">
+    <div class="container">
+      <!-- Logo -->
+      <i class="fa fa-long-arrow-left" style="color: #000000;"></i><a href="dashboard.html"
+       style="text-decoration: none; color: #000000;";>
+        Back To Dashboard</a>
+    </div>
+  </footer>
+  
+
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Bootstrap JS and Popper.js (version 4) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
